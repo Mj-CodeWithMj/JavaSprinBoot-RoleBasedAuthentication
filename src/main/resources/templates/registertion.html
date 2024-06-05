@@ -1,0 +1,49 @@
+<th:block th:include="~{header}"></th:block>
+<!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Registrion</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+    
+   <!-- form registrtion start -->
+   
+   <div class="container p-5">
+	   <div class="row">
+		   <div class="card col-md-6">
+		      <div class="card-body">
+		          <div class="card-header text-center text-white fs-5 " style="background-color: #20c997;">Registrion form</div>
+		          <form action="#" th:action="@{/registertion}" th:object="${user}" method="post">
+			          <div class="form-group pt-4 ">
+			          	<label class="text-dark">Enter New Username</label>
+		        		<input type="text" th:field="*{username}" class=form-control placeholder="Enter Username">
+			          </div>
+			          <div class="form-group pt-3 ">
+			          	<label class="text-dark">Enter New Email</label>
+		        		<input type="email" th:field="*{email}" class=form-control placeholder="Enter Email">
+			          </div>
+			          <div class="form-group pt-3 ">
+			          	<label class="text-dark">Enter New Password</label>
+		        		<input type="text" th:field="*{Password}" class=form-control placeholder="Enter Password">
+			          </div>
+			          <div class="form-group pt-3 ">
+		        		<input type="text" th:field="*{roles}" class=form-control hidden>
+			          </div >
+			          <div class="form-group pt-3 ">
+		        		<input type="submit" value="Sign-in" class=form-control>
+			          </div>
+			          <p>Already have an Account click here to </u><a href="login"><u>Login</u></a></p>
+		          </form>
+		      </div>
+		   </div>
+	   </div>
+   </div>
+   <!-- form registrtion end --> 
+<th:block th:include="~{footer}"></th:block>
